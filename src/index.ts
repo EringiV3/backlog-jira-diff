@@ -8,7 +8,7 @@ import { BacklogTicket, DoneJiraTicket } from "@types";
 
 async function main() {
   const backlog: Backlog = new Backlog();
-  const undoneBacklogTickets: BacklogTicket[] = await backlog.getUndoneTicketsIssueKey();
+  const undoneBacklogTickets: BacklogTicket[] = await backlog.getUndoneTickets();
 
   const jira: Jira = new Jira();
   const doneJiraTickets: DoneJiraTicket[] = await jira.getDoneTickets();

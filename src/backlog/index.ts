@@ -27,7 +27,7 @@ export class Backlog {
   /**
    * targetProjectIdsに指定されたプロジェクトごとの未完了のチケットを取得します
    */
-  async getUndoneTicketsIssueKey(): Promise<BacklogTicket[]> {
+  async getUndoneTickets(): Promise<BacklogTicket[]> {
     const undoneTickets: BacklogGetIssuesResponse[][] = await Promise.all(
       this.targetProjectIds.map(
         async (projectId) =>
