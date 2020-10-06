@@ -43,7 +43,7 @@ export class Backlog {
       return {
         issueKey: ticket.issueKey,
         summary: ticket.summary,
-        url: "", // TODO 課題のURLを出力する
+        url: `https://${SPACE_HOST}/view/${ticket.issueKey}`,
       };
     });
   }
